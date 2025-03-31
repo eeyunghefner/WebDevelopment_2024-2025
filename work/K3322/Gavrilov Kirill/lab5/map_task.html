@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <style>
+        #cup {
+            transition: background-color 0.3s;
+        }
+    </style>
+    <script>
+        function closePage() {
+            window.close();
+        }
+
+        function changeBoxImage() {
+            document.getElementById('photo').src = 'item.jpg';
+        }
+
+        function showBackpackAlert() {
+            alert('Вы нажали на рюкзак!');
+        }
+
+        function goToRingPage() {
+            window.location.href = 'order.html';
+        }
+
+        function randomColor() {
+            const color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+
+<body>
+<img id="photo" src="photo.jpg" usemap="#image-map">
+
+<map name="image-map">
+    <area target="" alt="" title="macbook"
+          href="https://market.yandex.ru/product--noutbuk-apple-macbook-pro-14-m3-max-16c-cpu-40c-gpu-64gb-1gb-ssd-z1aw00214-space-black/924817178?sku=103706227201&uniqueId=707269&do-waremd5=cT3enRpdKsfoZAFi5IQWSA&sponsored=1&cpc=wrwtBAnU--9Fm4OgmDYxVTnbOaSld9kfHSCAp4FbWVasNTdAlTsoBcrmg_DchDssoQGBLhJnOAYJrg_w51xiaVKfQl4p1VbYsLQBIPgA_ToL90-fYyIUC9tWZhkFuZEn0hZTf4uWs5tsNz_UMzUryOx94dsdtvGaixXqWS-of-QlnY5MjHfEPB9iwebNetqDHwDGQ0LehTje6YJHey3-2mRSIgfUNy_nxsTHINYGvn5k2o-pSCaPsjs4ogL-UGHHZ2K1C-pqg_lYykPoy58YZzSPhVIDJqj3Zkvb4EPze130IowRiXITAgPfJe8TjAnK88cwusk7EbrSRLpmT193ak52GB5yuA3ZXlVEqy3EHG4Qzjb23DM5F6gxzOzk4QO3tjkVi2fbZ7cJNHq23Q2P61p4GezMRUseS40U1kRhDTMxIYirdyrXakwjg7zz6TtOszd9SIHEOLBUUBPjOhopmF9hKCC0Hkm0G7-ynsLn1bfq0B2inGfz-jIDEOkCad3-5qj6ndHQcF_CTTpsKRYqlK-os4QGjqa5R-M8UIc40QGi8bL_EbXfxHZ_PMEDProFhgeG3_k7DULKOoK1rGeiW5o-2AxZF8tQ0uL7Kr-AeylD9PIw8c_D6bG8gTOjsiw6H7fluvvjjO8%2C&nid=40561490"
+          coords="500,169,895,439" shape="rect">
+    <area target="" alt="ring" title="ring" href="javascript:goToRingPage();" coords="943,668,46" shape="circle">
+    <area target="" alt="backpack" title="backpack" href="javascript:showBackpackAlert();"
+          coords="188,304,90,387,28,469,65,489,53,526,53,553,51,579,49,606,55,627,55,650,55,663,54,695,44,736,43,774,48,806,72,888,84,936,119,965,154,991,173,1029,226,1034,363,994,403,973,412,970,423,985,427,992,459,975,452,950,460,930,465,916,487,859,484,832,493,797,497,737,497,688,492,644,480,593,479,507,481,473,493,468,487,449,473,435,469,411,451,372,411,332,366,288,306,276,254,290"
+          shape="poly">
+    <area target="" alt="cup" title="cup" href="javascript:closePage();"
+          coords="522,668,522,678,550,684,557,699,555,716,555,970,568,987,640,986,651,965,652,719,642,693,642,674,642,653,604,658"
+          shape="poly" id="cup">
+    <area target="" alt="box" title="box" href="javascript:changeBoxImage();" coords="1081,498,1001,423" shape="rect">
+    <area target="" alt="bag" title="bag" href="javascript:randomColor();" coords="687,478,669,503,679,507,675,524,672,556,686,621,727,648,858,644,892,624,905,565,899,515,895,493,862,471,709,474" shape="poly">
+</map>
+
+</body>
+</html>
