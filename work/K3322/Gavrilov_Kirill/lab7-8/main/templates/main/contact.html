@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+
+{% block title %}Обратная связь{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">Форма обратной связи</h1>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+<form method="post" class="bg-light p-4 rounded shadow-sm">
+    {% csrf_token %}
+    <div class="mb-3">
+        {{ form.name.label_tag }} {{ form.name }}
+    </div>
+    <div class="mb-3">
+        {{ form.surname.label_tag }} {{ form.surname }}
+    </div>
+    <div class="mb-3">
+        {{ form.email.label_tag }} {{ form.email }}
+    </div>
+    <div class="mb-3">
+        {{ form.message.label_tag }} <br/>
+        {{ form.message }}
+    </div>
+    <div class="mb-3">
+        {{ form.score.label_tag }}<br>
+        {{ form.score }}
+    </div>
+    <div class="mb-3">
+        {{ form.service.label_tag }}<br>
+        {{ form.service }}
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+</form>
+{% endblock %}
+
+
+
+
+

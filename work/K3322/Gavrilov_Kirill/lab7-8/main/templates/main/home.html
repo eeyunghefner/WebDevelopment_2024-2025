@@ -1,0 +1,19 @@
+{% extends "main/base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4 mb-4">Добро пожаловать на сайт!</h1>
+    <p class="lead">Надеемся, вам понравится пользоваться нашим сервисом.</p>
+    <p class="lead mb-5">Выберите действие:</p>
+    <div class="d-flex justify-content-center gap-4">
+        <a href="{% url 'about' %}" class="btn btn-lg btn-outline-primary px-5 py-3">
+            <i class="fa-solid fa-info-circle me-2"></i> О разработке
+        </a>
+        <a href="{% url 'contact' %}" class="btn btn-lg btn-outline-success px-5 py-3">
+            <i class="fa-solid fa-envelope me-2"></i> Обратная связь
+        </a>
+    </div>
+</div>
+{% endblock %}
